@@ -353,13 +353,13 @@ public class ColumnFamilyOptions extends RocksObject
 
   @Override
   public ColumnFamilyOptions setMaxBytesForLevelMultiplier(
-      final int multiplier) {
+      final double multiplier) {
     setMaxBytesForLevelMultiplier(nativeHandle_, multiplier);
     return this;
   }
 
   @Override
-  public int maxBytesForLevelMultiplier() {
+  public double maxBytesForLevelMultiplier() {
     return maxBytesForLevelMultiplier(nativeHandle_);
   }
 
@@ -776,8 +776,8 @@ public class ColumnFamilyOptions extends RocksObject
   private native boolean levelCompactionDynamicLevelBytes(
       long handle);
   private native void setMaxBytesForLevelMultiplier(
-      long handle, int multiplier);
-  private native int maxBytesForLevelMultiplier(long handle);
+      long handle, double multiplier);
+  private native double maxBytesForLevelMultiplier(long handle);
   private native void setMaxCompactionBytes(long handle, long maxCompactionBytes);
   private native long maxCompactionBytes(long handle);
   private native void setSoftRateLimit(

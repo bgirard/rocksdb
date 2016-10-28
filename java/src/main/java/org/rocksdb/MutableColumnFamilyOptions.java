@@ -843,14 +843,14 @@ public class MutableColumnFamilyOptions {
 
     @Override
     public MutableColumnFamilyOptionsBuilder setMaxBytesForLevelMultiplier(
-        final int maxBytesForLevelMultiplier) {
-      return setInt(CompactionOption.max_bytes_for_level_multiplier,
+        final double maxBytesForLevelMultiplier) {
+      return setDouble(CompactionOption.max_bytes_for_level_multiplier,
           maxBytesForLevelMultiplier);
     }
 
     @Override
-    public int maxBytesForLevelMultiplier() {
-      return getInt(CompactionOption.max_bytes_for_level_multiplier);
+    public double maxBytesForLevelMultiplier() {
+      return getDouble(CompactionOption.max_bytes_for_level_multiplier);
     }
 
     @Override
